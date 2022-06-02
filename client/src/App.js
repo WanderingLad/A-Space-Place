@@ -1,43 +1,25 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
-
+import Home from './pages/Home';
 
 const client = new ApolloClient({
-  request: (operation) => {
-    const token = localStorage.getItem("id_token");
-
-    operation.setContext({
-      headers: {
-        authorization: token ? `Bearer ${token}` : "",
-      },
-    });
-  },
-  uri: "/graphql",
-  cache: new InMemoryCache()
+  uri: '/graphql',
+  cache: new InMemoryCache(),
 });
 
 function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <>
-          <Navbar />
+        <div className="flex-column justify-center align-center min-100-vh bg-primary">
           <Routes>
-            <Route
-              path='/'
-              element={<SearchBooks />}
-            />
-            <Route
-              path='/saved'
-              element={<SavedBooks />}
-            />
-            <Route
-              path='*'
-              element={<h1 className='display-2'>Wrong page!</h1>}
+            <Route 
+              path="/" 
+              element={<Home />}
             />
           </Routes>
-        </>
+        </div>
       </Router>
     </ApolloProvider>
   );
