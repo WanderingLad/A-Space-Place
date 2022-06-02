@@ -1,25 +1,22 @@
 const { Schema, model } = require('mongoose');
 
-const moderatorSchema = new Schema(
+const postSchema = new Schema(
   {
-    username: {
+    content: {
       type: String,
       required: true,
       unique: true,
     },
-    email: {
+    image: {
       type: String,
-      required: true,
       unique: true,
-      match: [/.+@.+\..+/, 'Must use a valid email address'],
     },
-    password: {
+    link: {
       type: String,
-      required: true,
     }
   }
 );
 
-const Moderator = model('Moderator', moderatorSchema);
+const Post = model('Post', postSchema);
 
-module.exports = Moderator;
+module.exports = Post;
