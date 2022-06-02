@@ -40,6 +40,51 @@ const Home = () => {
       </div>
     </div>
   );
+  {/* <html>
+  <head>
+      <title>Our Badass Solar System</title>
+  </head>
+  <body>
+  
+  <!-- 
+      main has the stars background set. 
+      Should be the size of the full viewport and doesn't scroll
+  -->
+      <main>
+          
+      <!-- Section for sun and each planet -->
+      <!-- All sections/layers sit "on top" of each other, only the active section is visible -->
+      <!-- Animate to the next or previous section using React based on direction of scroll or nav button clicked -->
+          <section id='sun'>
+              
+              <img id='sun-img'/>
+              <div id='sun-desc'>
+                  <!-- title -->
+                  <!-- description -->
+                  <!-- link to posts about sun -->
+                  <!-- nav buttons -->
+              </div>
+          
+          </section>
+          
+          <section id='mercury'>
+              
+              <img id='mercury-img'/>
+              <div id='mercury-desc'>
+                  <!-- title -->
+                  <!-- description -->
+                  <!-- link to posts about mercury -->
+                  <!-- nav buttons -->
+              </div>
+          
+          </section>
+          
+          <!-- ... and so on -->
+      
+      </main>
+  
+  </body>
+  </html> */}
 };
 
 export default Home;
