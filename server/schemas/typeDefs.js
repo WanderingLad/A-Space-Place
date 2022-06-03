@@ -17,6 +17,7 @@ const typeDefs = gql`
 
   type Post {
     _id: ID!
+    body: String!
     content: String!
     image: String
     link: String
@@ -32,10 +33,11 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    login(email: String!, password: String!): Auth
+    userLogin(email: String!, password: String!): Auth
+    moderatorLogin(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
     addModerator(username: String!, email: String!, password: String!): Auth
-    addPost(content: String!, image: String, link: String): Post
+    addPost(body: String!, content: String!, image: String, link: String): Post
     removePost(_id: ID!): Post
   }
 `;
