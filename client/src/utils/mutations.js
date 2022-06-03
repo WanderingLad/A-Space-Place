@@ -41,7 +41,7 @@ export const ADD_MODERATOR = gql`
   mutation addModerator($username: String!, $password: String!, $email: String!) {
     addModerator(username: $username, password: $password, email: $email) {
       token
-      user {
+      moderator {
         username
         _id
         email
@@ -63,8 +63,8 @@ export const ADD_POST = gql`
 `;
 
 export const REMOVE_POST = gql`
-  mutation removePost($body: String!) {
-    removePost(body: $body) {
+  mutation removePost($_id: ID!) {
+    removePost(_id: $_id) {
         post {
             body
             content

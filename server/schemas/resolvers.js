@@ -4,21 +4,22 @@ const { signToken } = require("../utils/auth");
 
 const resolvers = {
   Query: {
-    post: async () => {
-      return await Post.find({});
+    post: async (parent, args) => {
+      return await Post.find({ body: args.body });
     }
   },
   Mutation: {
     userLogin: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
-
+      
       if (!user) {
-        throw new AuthenticationError("Invalid credentials");
+        throw new AuthenticationError("Invalid Email");
       }
 
       const correctPassword = await user.isCorrectPassword(password);
+      
       if (!correctPassword) {
-        throw new AuthenticationError("Invalid credentials");
+        throw new AuthenticationError("Invalid Password");
       }
       const token = signToken(user);
 
@@ -28,12 +29,12 @@ const resolvers = {
       const moderator = await Moderator.findOne({ email });
 
       if (!moderator) {
-        throw new AuthenticationError("Invalid credentials");
+        throw new AuthenticationError("Invalid Email");
       }
 
       const correctPassword = await moderator.isCorrectPassword(password);
       if (!correctPassword) {
-        throw new AuthenticationError("Invalid credentials");
+        throw new AuthenticationError("Invalid Password");
       }
       const token = signToken(moderator);
 
@@ -57,10 +58,8 @@ const resolvers = {
 
       return { token, post };
     },
-    removePost: async (parent, args) => {
-      const post = await Post.findOneAndDelete({body: args.body});
-
-      return post;
+    removePost: async (parent, args, context) => {
+      return await Post.findOneAndDelete({ _id: context.id });;
     }
   },
 };

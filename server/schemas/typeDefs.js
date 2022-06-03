@@ -20,21 +20,31 @@ const typeDefs = gql`
     link: String
   }
 
-  type Auth {
+  type UserAuth {
     token: ID!
     user: User
   }
+  
+  type ModeratorAuth {
+    token: ID!
+    moderator: Moderator
+  }
 
-  type Query {
+  type PostAuth {
+    token: ID!
     post: Post
   }
 
+  type Query {
+    post(body:String!): [Post]
+  }
+
   type Mutation {
-    userLogin(email: String!, password: String!): Auth
-    moderatorLogin(email: String!, password: String!): Auth
-    addUser(username: String!, email: String!, password: String!): Auth
-    addModerator(username: String!, email: String!, password: String!): Auth
-    addPost(body: String!, content: String!, image: String, link: String): Post
+    userLogin(email: String!, password: String!): UserAuth
+    moderatorLogin(email: String!, password: String!): ModeratorAuth
+    addUser(username: String!, email: String!, password: String!): UserAuth
+    addModerator(username: String!, email: String!, password: String!): ModeratorAuth
+    addPost(body: String!, content: String!, image: String, link: String): PostAuth
     removePost(_id: ID!): Post
   }
 `;
