@@ -5,7 +5,7 @@ const { signToken } = require("../utils/auth");
 const resolvers = {
   Query: {
     post: async (parent, args) => {
-      const postData = await Post.findOne({ _id: args._id });
+      const postData = await Post.findOne({ body: args.body });
 
       return postData;
     }
