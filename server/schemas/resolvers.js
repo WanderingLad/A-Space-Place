@@ -4,10 +4,8 @@ const { signToken } = require("../utils/auth");
 
 const resolvers = {
   Query: {
-    post: async (parent, args) => {
-      const postData = await Post.findOne({ body: args.body });
-
-      return postData;
+    post: async () => {
+      return await Post.find({});
     }
   },
   Mutation: {
@@ -60,7 +58,7 @@ const resolvers = {
       return { token, post };
     },
     removePost: async (parent, args) => {
-      const post = await Post.findOneAndDelete({_id: args._id});
+      const post = await Post.findOneAndDelete({body: args.body});
 
       return post;
     }

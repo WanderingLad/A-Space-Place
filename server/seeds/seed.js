@@ -6,10 +6,22 @@ const moderatorData = require('./moderatorData.json');
 const postData = require('./postData.json');
 
 db.once('open', async () => {
-  await Tech.deleteMany({});
+  await User.deleteMany({});
 
-  const technologies = await Tech.insertMany(techData);
+  await User.insertMany(userData);
 
-  console.log('Technologies seeded!');
+  console.log('Users seeded!');
+
+  await Moderator.deleteMany({});
+
+  await Moderator.insertMany(moderatorData);
+
+  console.log('Moderators seeded!');
+
+  await Post.deleteMany({});
+
+  await Post.insertMany(postData);
+
+  console.log('Posts seeded!');
   process.exit(0);
 });

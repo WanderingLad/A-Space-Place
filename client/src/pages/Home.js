@@ -1,5 +1,5 @@
 //import { Link } from 'react-router-dom';
-//import { useQuery } from '@apollo/client';
+import { useQuery, useMutation } from '@apollo/client';
 import React from "react";
 
 const Home = () => {
@@ -11,7 +11,7 @@ const Home = () => {
 
       <main>
 
-         Section for sun and each planet -->
+        Section for sun and each planet
         All sections/layers sit "on top" of each other, only the active section is visible
         Animate to the next or previous section using React based on direction of scroll or nav button clicked
         <section id='sun'>
