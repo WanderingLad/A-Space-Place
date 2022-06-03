@@ -27,7 +27,7 @@ const moderatorSchema = new Schema(
   }
 );
 
-// hash user password
+// hash moderator password
 moderatorSchema.pre('save', async function (next) {
   if (this.isNew || this.isModified('password')) {
     const saltRounds = 10;
