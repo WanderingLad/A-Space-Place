@@ -1,5 +1,15 @@
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/aspaceplace').then(() => {console.log('connected')});
+mongoose.connect(
+  process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/programming-thoughts',
+
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+  } 
+).then(() => {console.log('connected')});
 
 module.exports = mongoose.connection;
+

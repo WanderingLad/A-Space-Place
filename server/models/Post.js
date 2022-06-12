@@ -2,7 +2,15 @@ const { Schema, model } = require('mongoose');
 
 const postSchema = new Schema(
   {
+    user: {
+      type: String,
+      required: true
+    },
     body: {
+      type: String,
+      required: true
+    },
+    title: {
       type: String,
       required: true
     },
@@ -10,12 +18,17 @@ const postSchema = new Schema(
       type: String,
       required: true
     },
+    approved: {
+      type: Boolean,
+      default: false,
+      required: true
+    },
     image: {
       type: String,
     },
     link: {
       type: String,
-    }
+    },
   }
 );
 

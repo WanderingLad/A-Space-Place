@@ -1,32 +1,20 @@
 [
     {
+        "user": "Admin",
         "body": "Sun",
-        "content": "The sun is very ",
-        "image": "none",
-        "link": "none"
+        "title": "Sun Releases Significant Solar Flare",
+        "content": "The Sun emitted a significant solar flare peaking at 11:35 a.m. EDT on Oct. 28, 2021. NASA’s Solar Dynamics Observatory, which watches the Sun constantly, captured an image of the event. Read more below.",
+        "approved": true,
+        "image": "Sun_Post_One.jpg",
+        "link": "https://blogs.nasa.gov/solarcycle25/2021/10/28/sun-releases-significant-solar-flare/"
     },
     {
-        "body": "Mars",
-        "content": "The sun is very hot",
-        "image": "non",
-        "link": "none"
-    },
-    {
-        "body": "Venus",
-        "content": "The sun is very ho",
-        "image": "no",
-        "link": "none"
-    },
-    {
-        "body": "Earth",
-        "content": "The sun is very h",
-        "image": "n",
-        "link": "none"
-    },
-    {
-        "body": "Earth",
-        "content": "The sun i very h",
-        "image": "na",
-        "link": "nne"
+        "user": "Admin",
+        "body": "Sun",
+        "title": "Studying the Edge of the Sun’s Magnetic Bubble",
+        "content": "Our corner of the universe, the solar system, is nestled inside the Milky Way galaxy, home to more than 100 billion stars. The solar system is encased in a bubble called the heliosphere, which separates us from the vast galaxy beyond – and some of its harsh space radiation. Read more below.",
+        "approved": true,
+        "image": "Sun_Post_One.jpg",
+        "link": "https://www.nasa.gov/feature/goddard/2021/studying-the-edge-of-the-sun-s-magnetic-bubble"
     }
 ]

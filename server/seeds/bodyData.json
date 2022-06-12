@@ -1,0 +1,112 @@
+[
+    {
+        "id": 0,
+        "name": "Sun",
+        "image": "Sun.jpg",
+        "type": "Yellow Dwarf",
+        "age": "~4.5 Billion Years",
+        "dist": "26,000 Light Years",
+        "year": "Latin Word for Sun: 'Sol'",
+        "sake": "Roman God of Speed",
+        "temp": "27 Million Degrees Fahrenheit"
+    },
+    {
+        "id": 1,
+        "name": "Mercury",
+        "image": "Mercury.jpg",
+        "type": "Terrestrial",
+        "age": "~4.3 Billion Years",
+        "dist": "0.4 AU",
+        "year": "88 Earth Days",
+        "sake": "Roman God of Speed",
+        "temp": "354 Degrees Fahrenheit"
+    },
+    {
+        "id": 2,
+        "name": "Venus",
+        "image": "Venus.jpg",
+        "type": "Terrestrial",
+        "age": "~4.5 Billion Years",
+        "dist": "0.7 AU",
+        "year": "225 Earth Days",
+        "sake": "Roman Goddess of Love",
+        "temp": "900 Degrees Fahrenheit"
+    },
+    {
+        "id": 3,
+        "name": "Earth",
+        "image": "Earth.jpg",
+        "type": "Terrestrial",
+        "age": "~4.5 Billion Years",
+        "dist": "1 AU",
+        "year": "365 Earth Days",
+        "sake": "Variation of 'Ground' in Many Languages",
+        "temp": "57 Degrees Fahrenheit"
+    },
+    {
+        "id": 4,
+        "name": "Mars",
+        "image": "Mars.jpg",
+        "type": "Terrestrial",
+        "age": "~4.6 Billion Years",
+        "dist": "1.5 AU",
+        "year": "1.88 Earth Years",
+        "sake": "Roman God of War",
+        "temp": "-81 Degrees Fahrenheit"
+    },
+    {
+        "id": 5,
+        "name": "Jupiter",
+        "image": "Jupiter.jpg",
+        "type": "Gas Giant",
+        "age": "~4.6 Billion Years",
+        "dist": "5.2 AU",
+        "year": "11.86 Earth Years",
+        "sake": "King of Roman Gods",
+        "temp": "-238 Degrees Fahrenheit"
+    },
+    {
+        "id": 6,
+        "name": "Saturn",
+        "image": "Saturn.jpg",
+        "type": "Gas Giant",
+        "age": "~4.5 Billion Years",
+        "dist": "9.5 AU",
+        "year": "29.45 Earth Years",
+        "sake": "Father of Jupiter",
+        "temp": "-285 Degrees Fahrenheit"
+    },
+    {
+        "id": 7,
+        "name": "Uranus",
+        "image": "Uranus.jpg",
+        "type": "Ice Giant",
+        "age": "~4.5 Billion Years",
+        "dist": "19.8 AU",
+        "year": "84 Earth Years",
+        "sake": "Greek God of the Sky",
+        "temp": "-353 Degrees Fahrenheit"
+    },
+    {
+        "id": 8,
+        "name": "Neptune",
+        "image": "Neptune.jpg",
+        "type": "Ice Giant",
+        "age": "~4.5 Billion Years",
+        "dist": "30.1 AU",
+        "year": "164.81 Earth Years",
+        "sake": "Roman God of the Sea",
+        "temp": "-373 Degrees Fahrenheit"
+    },
+    {
+        "id": 9,
+        "name": "Pluto",
+        "image": "Pluto.jpg",
+        "type": "Dwarf Planet",
+        "age": "~4.6 Billion Years",
+        "dist": "39 AU",
+        "year": "248.89 Earth Years",
+        "sake": "Roman God of the Underworld",
+        "temp": "-387 Degrees Fahrenheit"
+    }
+]

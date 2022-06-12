@@ -1,0 +1,12 @@
+export const GET_SUN = 'GET_SUN';
+export const GET_MERCURY = 'GET_MERCURY';
+export const GET_VENUS = 'GET_VENUS';
+export const GET_EARTH = 'GET_EARTH';
+export const GET_MARS = 'GET_MARS';
+export const GET_JUPITER = 'GET_JUPITER';
+export const GET_SATURN = 'GET_SATURN';
+export const GET_URANUS = 'GET_URANUS';
+export const GET_NEPTUNE = 'GET_NEPTUNE';
+export const GET_PLUTO = 'GET_PLUTO';
+export const MODERATOR_LOGIN = 'MODERATOR_LOGIN';
+export const USER_LOGIN = 'USER_LOGIN';

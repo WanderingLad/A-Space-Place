@@ -2,6 +2,7 @@ const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
   type User {
+    _id: ID!
     username: String!
     email: String!
     password: String!
@@ -14,10 +15,26 @@ const typeDefs = gql`
   }
 
   type Post {
+    _id: ID!
+    user: String!
     body: String!
+    title: String!
     content: String!
+    approved: Boolean!
     image: String
     link: String
+  }
+
+  type Body {
+    id: Int!
+    name: String!
+    image: String!
+    type: String!
+    age: String!
+    dist: String!
+    year: String!
+    sake: String!
+    temp: String!
   }
 
   type UserAuth {
@@ -36,16 +53,24 @@ const typeDefs = gql`
   }
 
   type Query {
-    post(body:String!): [Post]
+    post(_id: ID!): Post
+    posts(body: String!): [Post]
+    userPost(user: String!): [Post]
+    approvePost(approved: Boolean!): [Post]
+    user(email: String!): User
+    users: [User]
+    moderator(email: String!): Moderator
+    body(id: Int!): Body
   }
 
   type Mutation {
     userLogin(email: String!, password: String!): UserAuth
     moderatorLogin(email: String!, password: String!): ModeratorAuth
     addUser(username: String!, email: String!, password: String!): UserAuth
-    addModerator(username: String!, email: String!, password: String!): ModeratorAuth
-    addPost(body: String!, content: String!, image: String, link: String): PostAuth
+    addPost(user: String, body: String!, title: String, content: String!, image: String, link: String): PostAuth
     removePost(_id: ID!): Post
+    removeUser(_id: ID!): User
+    approvePosts(_id: ID!): Post
   }
 `;
 
