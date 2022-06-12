@@ -25,8 +25,8 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_POST = gql`
-  mutation addPost($user: String$body: String!, $title: String!, $content: String!, $image: String, $link: String) {
-    addPost(user: $user, body: $body, title: $title, content: $content, image: $image, link: $link) {
+  mutation addPost($user: String$body: String!, $title: String!, $content: String!, $link: String!) {
+    addPost(user: $user, body: $body, title: $title, content: $content, link: $link) {
       token
       post {
         user

@@ -5,6 +5,8 @@ import { Button } from 'react-bootstrap';
 import Posts from '../components/homepage/Posts';
 import { GET_SUN, GET_MERCURY, GET_VENUS, GET_EARTH, GET_MARS, GET_JUPITER, GET_SATURN, GET_NEPTUNE, GET_URANUS, GET_PLUTO } from '../utils/Module/actions';
 import { useDispatch } from 'react-redux';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleUp, faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
 export default function Home() {
 
@@ -67,15 +69,14 @@ export default function Home() {
     <div className="full-width">
       <main>
         <div className="flex-column justify-center align-center">
-          <Button className="previous-button"
+          <Button
             type='button'
-            variant='success'
             onClick={() => {
               if (count > 0) {
                 setCount(count - 1);
               }
             }}>
-            Previous
+            <FontAwesomeIcon icon={faAngleUp} />
           </Button>
         </div>
         <div className="d-inline-flex full-width">
@@ -121,13 +122,13 @@ export default function Home() {
         <div className="flex-column justify-center align-center">
           <Button
             type='button'
-            variant='success'
             onClick={() => {
               if (count < 9) {
                 setCount(count + 1);
               }
             }}>
-            Next
+            
+            <FontAwesomeIcon icon={faAngleDown} />
           </Button>
         </div>
       </main>

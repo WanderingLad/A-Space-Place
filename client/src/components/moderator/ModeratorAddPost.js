@@ -5,7 +5,7 @@ import { useMutation } from '@apollo/client';
 import { ADD_POST } from '../../utils/mutations';
 
 export default function ModeratorAddPost() {
-    const [moderatorPostData, setModeratorPostData] = useState({ user: "Moderator", body: 'Sun', content: '', link: '', image: '' });
+    const [moderatorPostData, setModeratorPostData] = useState({ user: "Moderator", body: 'Sun', title: '', content: '', link: ''});
 
     const [validated] = useState(false);
 
@@ -38,7 +38,7 @@ export default function ModeratorAddPost() {
             console.error(err);
             setShowAlert(true);
         }
-        setModeratorPostData({ body: '', content: '', link: '', image: '' });
+        setModeratorPostData({ body: '', title: '', content: '', link: ''});
     }
     return (
         <>
@@ -72,29 +72,23 @@ export default function ModeratorAddPost() {
                 </Form.Group>
 
                 <Form.Group>
-                    <Form.Label htmlFor='link'>Relevant Link</Form.Label>
+                    <Form.Label htmlFor='title'>Post Title</Form.Label>
                     <Form.Control
                         type='text'
-                        placeholder='Link'
-                        name='link'
+                        placeholder='Title'
+                        name='title'
                         onChange={handleInputChange}
-                        value={moderatorPostData.link}
+                        value={moderatorPostData.title}
                     />
+                    <Form.Control.Feedback type='invalid'>This is required!</Form.Control.Feedback>
                 </Form.Group>
+
+                
                 <Form.Group>
-                    <Form.Label htmlFor='image'>Relevant Image</Form.Label>
+                    <Form.Label htmlFor='content'>Content</Form.Label>
                     <Form.Control
-                        type='text'
-                        placeholder='Image'
-                        name='image'
-                        onChange={handleInputChange}
-                        value={moderatorPostData.image}
-                    />
-                </Form.Group>
-                <Form.Group>
-                    <Form.Label htmlFor='content'>Post about {moderatorPostData.body}</Form.Label>
-                    <Form.Control
-                        type='text'
+                        as='textarea'
+                        rows={4}
                         placeholder='Content'
                         name='content'
                         onChange={handleInputChange}
@@ -102,6 +96,17 @@ export default function ModeratorAddPost() {
                         required
                     />
                     <Form.Control.Feedback type='invalid'>This is required!</Form.Control.Feedback>
+                </Form.Group>
+
+                <Form.Group>
+                    <Form.Label htmlFor='link'>Reference Link</Form.Label>
+                    <Form.Control
+                        type='text'
+                        placeholder='Link'
+                        name='link'
+                        onChange={handleInputChange}
+                        value={moderatorPostData.link}
+                    />
                 </Form.Group>
                 <Button
                     disabled={!(moderatorPostData.body && moderatorPostData.content)}

@@ -985,13 +985,13 @@ a:hover {
   border-radius: 0.3rem;
   border: 1px solid transparent;
   outline: none;
-  color: #1a1a1a;
-  background-color: #aeaeae;
-  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  color: white;
+  background-color: black;
+  /* transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out; */
 }
 
 .btn:hover {
-  background-color: #cecece;
+  background-color: inherit;
 }
 
 .btn.btn-squared {
@@ -1015,12 +1015,12 @@ a:hover {
 }
 
 .btn.btn-primary {
-  background-color: #2d3e50;
-  color: #d9e9e8;
-}
+  background-color: inherit;
+  color: inherit;
+} 
 
-.btn.btn-primary:hover {
-  background-color: #57779a;
+ .btn.btn-primary:hover {
+  background-color: inherit;
 }
 
 .btn.btn-danger {
@@ -1404,6 +1404,13 @@ ul {
 
 .modal-content {
   background: rgb(61,61,61);  
+}
+
+pre {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  white-space: pre-wrap;
 }
 
 /* col-sm */

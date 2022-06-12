@@ -7,7 +7,6 @@ export const POST = gql`
             user
             body
             title
-            image
             link
             content
             approved
@@ -21,7 +20,6 @@ export const POSTS = gql`
             user
             body
             title
-            image
             link
             content
             approved
@@ -34,7 +32,6 @@ export const USER_POST = gql`
             _id
             user
             body
-            image
             link
             content
             approved

@@ -21,8 +21,7 @@ const typeDefs = gql`
     title: String!
     content: String!
     approved: Boolean!
-    image: String
-    link: String
+    link: String!
   }
 
   type Body {
@@ -67,7 +66,7 @@ const typeDefs = gql`
     userLogin(email: String!, password: String!): UserAuth
     moderatorLogin(email: String!, password: String!): ModeratorAuth
     addUser(username: String!, email: String!, password: String!): UserAuth
-    addPost(user: String, body: String!, title: String, content: String!, image: String, link: String): PostAuth
+    addPost(user: String, body: String!, title: String, content: String!, link: String!): PostAuth
     removePost(_id: ID!): Post
     removeUser(_id: ID!): User
     approvePosts(_id: ID!): Post

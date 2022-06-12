@@ -5,9 +5,7 @@ import { useMutation } from '@apollo/client';
 import { ADD_POST } from '../../utils/mutations';
 
 export default function UserAddPost() {
-    const [userPostData, setUserPostData] = useState({ user: localStorage.getItem('username'), body: 'Sun', title: '', content: '', link: '', image: '' });
-
-    console.log(userPostData);
+    const [userPostData, setUserPostData] = useState({ user: localStorage.getItem('username'), body: 'Sun', title: '', content: '', link: '' });
 
     const [validated] = useState(false);
 
@@ -100,23 +98,13 @@ export default function UserAddPost() {
                 </Form.Group>
 
                 <Form.Group>
-                    <Form.Label htmlFor='link'>Relevant Link</Form.Label>
+                    <Form.Label htmlFor='link'>Reference Link</Form.Label>
                     <Form.Control
                         type='text'
                         placeholder='Link'
                         name='link'
                         onChange={handleInputChange}
                         value={userPostData.link}
-                    />
-                </Form.Group>
-                <Form.Group>
-                    <Form.Label htmlFor='image'>Relevant Image</Form.Label>
-                    <Form.Control
-                        type='text'
-                        placeholder='Image'
-                        name='image'
-                        onChange={handleInputChange}
-                        value={userPostData.image}
                     />
                 </Form.Group>
                 <Button

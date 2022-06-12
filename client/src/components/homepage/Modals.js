@@ -9,14 +9,14 @@ export default function Modals() {
     if (loading) return 'Loading...';
     if (error) return `Error! ${error.message}`;
 
+    console.log(data);
+
     return (
         <div id="blac-text">
             <h4>{data.post.title}</h4>
-            <figure>
-                <img src={require("../../images/" + data.post.image).default} alt="No Image to Show" />
-            </figure>
             <div>
-                <p>{data.post.content}</p>
+                <p><pre>{data.post.content}</pre></p>
+                <p>Read the Full Article Below</p>
             </div>
             <a href={data.post.link} target="_blank" rel="noopener noreferrer">{data.post.link}</a>
         </div>

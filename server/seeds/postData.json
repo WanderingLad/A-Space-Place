@@ -3,18 +3,24 @@
         "user": "Admin",
         "body": "Sun",
         "title": "Sun Releases Significant Solar Flare",
-        "content": "The Sun emitted a significant solar flare peaking at 11:35 a.m. EDT on Oct. 28, 2021. NASA’s Solar Dynamics Observatory, which watches the Sun constantly, captured an image of the event. Read more below.",
+        "content": "The Sun emitted a significant solar flare peaking at 11:35 a.m. EDT on Oct. 28, 2021. NASA’s Solar Dynamics Observatory, which watches the Sun constantly, captured an image of the event.\n\nSolar flares are powerful bursts of radiation. Harmful radiation from a flare cannot pass through Earth’s atmosphere to physically affect humans on the ground, however — when intense enough — they can disturb the atmosphere in the layer where GPS and communications signals travel.\n\nThis flare is classified as an X1-class flare.\n\nX-class denotes the most intense flares, while the number provides more information about its strength. An X2 is twice as intense as an X1, an X3 is three times as intense, etc. Flares that are classified X10 or stronger are considered unusually intense.",
         "approved": true,
-        "image": "Sun_Post_One.jpg",
         "link": "https://blogs.nasa.gov/solarcycle25/2021/10/28/sun-releases-significant-solar-flare/"
     },
     {
         "user": "Admin",
         "body": "Sun",
         "title": "Studying the Edge of the Sun’s Magnetic Bubble",
-        "content": "Our corner of the universe, the solar system, is nestled inside the Milky Way galaxy, home to more than 100 billion stars. The solar system is encased in a bubble called the heliosphere, which separates us from the vast galaxy beyond – and some of its harsh space radiation. Read more below.",
+        "content": "Our corner of the universe, the solar system, is nestled inside the Milky Way galaxy, home to more than 100 billion stars. The solar system is encased in a bubble called the heliosphere, which separates us from the vast galaxy beyond – and some of its harsh space radiation.\n\nWe’re protected from that radiation by the heliosphere, which itself is created by another source of radiation: the Sun. The Sun constantly spews charged particles, called the solar wind, from its surface. The solar wind flings out to about four times the distance of Neptune, carrying with it the magnetic field from the Sun.\n\n“Magnetic fields tend to push up against each other, but not mix,” said Eric Christian, a lead heliosphere research scientist at NASA’s Goddard Space Flight Center in Greenbelt, Maryland. “Inside the bubble of the heliosphere are pretty much all particles and magnetic fields from the Sun. Outside are those from the galaxy.”",
         "approved": true,
-        "image": "Sun_Post_One.jpg",
         "link": "https://www.nasa.gov/feature/goddard/2021/studying-the-edge-of-the-sun-s-magnetic-bubble"
+    },
+    {
+        "user": "Admin",
+        "body": "Sun",
+        "title": "Earth's sun: Facts about the sun's age, size and history",
+        "content": "The sun lies at the heart of the solar system, where it is by far the largest object. It holds 99.8% of the solar system's mass and is roughly 109 times the diameter of the Earth — about one million Earths could fit inside the sun.\n\nThe surface of the sun is about 10,000 degrees Fahrenheit (5,500 degrees Celsius) hot, while temperatures in the core reach more than 27 million F (15 million C), driven by nuclear reactions. One would need to explode 100 billion tons of dynamite every second to match the energy produced by the sun, according to NASA.\n\nThe sun is one of more than 100 billion stars in the Milky Way(opens in new tab). It orbits some 25,000 light-years from the galactic core, completing a revolution once every 250 million years or so. The sun is relatively young, part of a generation of stars known as Population I, which are relatively rich in elements heavier than helium. An older generation of stars is called Population II, and an earlier generation of Population III may have existed, although no members of this generation are known yet.",
+        "approved": true,
+        "link": "https://www.space.com/58-the-sun-formation-facts-and-characteristics.html"
     }
 ]

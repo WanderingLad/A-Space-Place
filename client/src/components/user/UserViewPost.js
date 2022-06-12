@@ -13,7 +13,6 @@ export default function UserViewPost() {
             {data.userPost.map((body) => {
                 return (
                     <section id={body.body} key={body._id}>
-                        <img id={body.body + '-img'} alt={body.image} />
                         <div >
                             <h2>{body.body}</h2>
                         </div>
