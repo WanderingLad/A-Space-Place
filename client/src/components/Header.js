@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 
 export default function Header() {
     return (
-        <div className="full-width">
+        <header className="full-width">
             <div  className="full-width d-inline-flex">
                 <div className="col-6 align-self-center">
                     <img src={require('../images/SpaceWalk.png').default} alt="Logo"/>
@@ -14,6 +14,6 @@ export default function Header() {
 
             </div>
             <hr />
-        </div>
+        </header>
     );
 };

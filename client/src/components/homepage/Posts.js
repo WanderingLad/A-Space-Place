@@ -23,7 +23,7 @@ export default function Posts() {
                 if (body.approved) {
                     return (
                         <li key={body.id}>
-                            <Link to="/" onClick={() => { localStorage.setItem('_id', body._id); setShowModal(true) }}><h3>{body.title}</h3></Link>
+                            <Link to="/" onClick={() => { localStorage.setItem('_id', body._id); setShowModal(true) }}><h3 id="repeating-title">{body.title}</h3></Link>
                         </li>
                     )
                 }

@@ -83,7 +83,7 @@ export default function Home() {
           </Button>
         </div>
         <div className="d-inline-flex full-width">
-          <section className="col-2">
+          <section className="col-3">
             <h2 id="info-title">{data.body.name}</h2>
             <div id="words">
               <span>
@@ -117,7 +117,7 @@ export default function Home() {
               <img alt={data.body.name} src={require("../images/" + data.body.image).default} />
             </figure>
           </section>
-          <section className="col-5 posts" id={data.body.name} key={data.body._id}>
+          <section className="col-4 posts" id={data.body.name} key={data.body._id}>
             <h4 id="post-title"> Submitted Posts</h4>
             <Posts />
           </section>
