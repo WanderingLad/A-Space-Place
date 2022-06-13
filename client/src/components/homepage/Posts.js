@@ -18,7 +18,7 @@ export default function Posts() {
     if (error) return `Error! ${error.message}`;
 
     return (
-        <ul className='bg-black overflow-auto h-75 align-self-center full-width'>
+        <ul id="posts-ul"className='overflow-auto h-75 align-self-center full-width'>
             {data.posts.map((body) => {
                 if (body.approved) {
                     return (

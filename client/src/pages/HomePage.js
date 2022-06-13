@@ -67,6 +67,9 @@ export default function Home() {
 
   return (
     <div className="full-width">
+      <div className="stars" />
+      <div className="stars2"/>
+      <div className="stars3"/>
       <main>
         <div className="flex-column justify-center align-center">
           <Button
@@ -109,13 +112,13 @@ export default function Home() {
               </span>
             </div>
           </section>
-          <section className="col-6 align-self-center" id={data.body.name} key={data.body._id}>
+          <section className="col-5 align-self-center" id={data.body.name} key={data.body._id}>
             <figure>
               <img alt={data.body.name} src={require("../images/" + data.body.image).default} />
             </figure>
           </section>
-          <section className="col-4 posts" id={data.body.name} key={data.body._id}>
-            <h4>Posts</h4>
+          <section className="col-5 posts" id={data.body.name} key={data.body._id}>
+            <h4 id="post-title"> Submitted Posts</h4>
             <Posts />
           </section>
         </div>

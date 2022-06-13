@@ -12,7 +12,7 @@ export default function Modals() {
     console.log(data);
 
     return (
-        <div id="blac-text">
+        <div>
             <h4>{data.post.title}</h4>
             <div>
                 <p><pre>{data.post.content}</pre></p>
