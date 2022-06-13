@@ -1897,6 +1897,10 @@ span p {
   }
 }
 
+@media screen and (min-width: 1024px) {
+
+}
+
 /* col-xl */
 @media screen and (min-width: 1200px) {
   .col-xl-1 {
@@ -2010,4 +2014,13 @@ span p {
   .align-content-center-xl {
     align-content: center;
   }
+
+  footer h4 {
+    margin-top: -.75rem;
+  }
+
+  .posts{
+    margin-left: 2.5rem;
+  }
+
 }

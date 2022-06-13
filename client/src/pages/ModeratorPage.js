@@ -17,8 +17,8 @@ export default function ModeratorPage() {
             <div className="stars" />
             <div className="stars2" />
             <div className="stars3" />
-            <h3 className="align-self-center col-6 text-center">Welcome, {localStorage.getItem('username')}</h3>
-            <div className="d-inline-flex col-5">
+            <h3 className="align-self-center col-4 text-center">Welcome, {localStorage.getItem('username')}</h3>
+            <div className="d-inline-flex col-7">
                 <div className="col-4">
                     <Button
                         type='button'

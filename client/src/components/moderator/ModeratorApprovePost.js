@@ -23,6 +23,9 @@ export default function ModeratorApprovePost() {
                         <div>
                             <h2>{body.body}</h2>
                         </div>
+                        <div id={body.body + '-title'}>
+                            {body.title}
+                        </div>
                         <div id={body.body + '-desc'}>
                             {body.content}
                         </div>

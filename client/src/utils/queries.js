@@ -35,6 +35,7 @@ export const USER_POST = gql`
             link
             content
             approved
+            title
         }
     }`;
 
@@ -47,6 +48,7 @@ export const APPROVE_POST = gql`
             link
             content
             approved
+            title
         }
     }`;
 
