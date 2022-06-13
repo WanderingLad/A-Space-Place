@@ -44,6 +44,7 @@ const AppNavbar = () => {
         show={showModal}
         onHide={() => setShowModal(false)}
         aria-labelledby='signup-modal'
+        id="nav-modal-container"
       >
         <Tab.Container defaultActiveKey='userLogin'>
 

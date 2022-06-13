@@ -1458,6 +1458,10 @@ span p {
   padding-top: 8.5rem;
 }
 
+#nav-modal-container {
+  padding-top: 13rem;
+}
+
 .stars {
   width: 1px;
   height: 1px;
