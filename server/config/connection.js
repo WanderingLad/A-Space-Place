@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/programming-thoughts',
+  process.env.MONGODB_URI || 'mongodb+srv://admin:alphabetsoup@a-space-place.lixpj49.mongodb.net/?retryWrites=true&w=majority',
 
   {
     useNewUrlParser: true,
