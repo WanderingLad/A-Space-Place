@@ -110,7 +110,6 @@ export default function UserAddPost() {
                 <Button
                     disabled={!(userPostData.body && userPostData.content)}
                     type='submit'
-                    variant='success'
                     onClick={() => {
                         console.log(userPostData);
                     }}>

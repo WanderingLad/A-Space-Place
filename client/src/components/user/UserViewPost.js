@@ -9,10 +9,10 @@ export default function UserViewPost() {
     if (error) return `Error! ${error.message}`;
 
     return (
-        <>
+        <ul className="overflow-auto overflow-posts">
             {data.userPost.map((body) => {
                 return (
-                    <section id={body.body} key={body._id}>
+                    <li id={body.body} key={body._id}>
                         <div >
                             <h2>{body.body}</h2>
                         </div>
@@ -22,9 +22,9 @@ export default function UserViewPost() {
                         <p>{body.link}</p>
 
                         <p>Approved: {body.approved.toString()}</p>
-                    </section>
+                    </li>
                 )
             })}
-        </>
+        </ul>
     );
 };

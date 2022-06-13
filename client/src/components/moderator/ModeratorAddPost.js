@@ -110,8 +110,7 @@ export default function ModeratorAddPost() {
                 </Form.Group>
                 <Button
                     disabled={!(moderatorPostData.body && moderatorPostData.content)}
-                    type='submit'
-                    variant='success'>
+                    type='submit'>
                     Submit
                 </Button>
             </Form>

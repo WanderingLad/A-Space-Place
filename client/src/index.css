@@ -164,6 +164,7 @@ textarea {
   /* 2 */
 }
 
+
 /**
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
@@ -979,15 +980,15 @@ a:hover {
   text-align: center;
   display: inline-block;
   padding: 0.5rem 1.2rem;
-  margin: 0;
+  margin: 0 0 1rem 0;
   text-decoration: none;
   font-size: 1rem;
   border-radius: 0.3rem;
-  border: 1px solid transparent;
+  border: 1px solid rgb(255, 255, 255, .9);
   outline: none;
   color: white;
-  background-color: black;
-  /* transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out; */
+  background-color: transparent;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 .btn:hover {
@@ -1463,7 +1464,13 @@ span p {
 }
 
 .subpage {
-  min-height: 80vh;
+  min-height: 81vh;
+}
+
+.overflow-posts {
+  height: 600px;
+  background-color: #1a1a1a;
+  color: rgb(255, 255, 255, .9);
 }
 
 .stars {

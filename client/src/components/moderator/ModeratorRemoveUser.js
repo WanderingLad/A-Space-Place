@@ -14,17 +14,16 @@ export default function ModeratorRemoveUser() {
     if (error) return `Error! ${error.message}`;
 
     return (
-        <>
+        <ul className="overflow-posts overflow-auto">
             {data.users.map((body) => {
                 return (
                     <section id={body.username} key={body._id}>
                         <div >
-                            <h2>{body.username}</h2>
-                            <h2>{body.email}</h2>
+                            <h4>{body.username}</h4>
+                            <h4>{body.email}</h4>
                         </div>
                         <Button
                             type='button'
-                            variant='success'
                             onClick={() => {
                                 removeUser({ variables: { '_id': body._id } });
                                 window.location.reload();
@@ -34,6 +33,6 @@ export default function ModeratorRemoveUser() {
                     </section>
                 )
             })}
-        </>
+        </ul>
     );
 };

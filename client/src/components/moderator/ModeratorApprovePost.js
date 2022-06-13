@@ -16,10 +16,10 @@ export default function ModeratorApprovePost() {
     if (error) return `Error! ${error.message}`;
 
     return (
-        <>
+        <ul className="overflow-auto overflow-posts">
             {data.approvePost.map((body) => {
                 return (
-                    <section id={body.body} key={body._id}>
+                    <li id={body.body} key={body._id}>
                         <div>
                             <h2>{body.body}</h2>
                         </div>
@@ -33,7 +33,6 @@ export default function ModeratorApprovePost() {
                         <p>Approved: {body.approved.toString()}</p>
                         <Button
                             type='button'
-                            variant='success'
                             onClick={() => {
                                 approvePosts({ variables: { '_id': body._id } })
                                 window.location.reload();
@@ -42,16 +41,15 @@ export default function ModeratorApprovePost() {
                         </Button>
                         <Button
                             type='button'
-                            variant='success'
                             onClick={() => {
                                 removePost({ variables: { '_id': body._id } });
                                 window.location.reload();
                             }}>
                             Remove Post
                         </Button>
-                    </section>
+                    </li>
                 )
             })}
-        </>
+        </ul>
     );
 };
