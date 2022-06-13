@@ -13,8 +13,8 @@ export default function Modals() {
 
     return (
         <div>
-            <h4>{data.post.title}</h4>
-            <div>
+            <h4 id="modal-title">{data.post.title}</h4>
+            <div id="modal-text">
                 <p><pre>{data.post.content}</pre></p>
                 <p>Read the Full Article Below</p>
             </div>

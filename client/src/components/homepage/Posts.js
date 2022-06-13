@@ -37,6 +37,7 @@ export default function Posts() {
                 show={showModal}
                 onHide={() => setShowModal(false)}
                 aria-labelledby='post-modal'
+                id="modal-container"
             >
                 <Tab.Container defaultActiveKey='post'>
                     <Modal.Body>
