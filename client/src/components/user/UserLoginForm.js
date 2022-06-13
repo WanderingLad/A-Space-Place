@@ -39,7 +39,6 @@ export default function UserLoginForm() {
       Auth.login(data.token);
       setShowSuccess(true);
     } catch (err) {
-      console.error(err);
       setShowAlert(true);
     }
     setUserFormData({ username: '', email: '', password: '' });

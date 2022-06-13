@@ -20,8 +20,7 @@ export default function ModeratorApprovePost() {
             {data.approvePost.map((body) => {
                 return (
                     <section id={body.body} key={body._id}>
-                        <img id={body.body + '-img'} alt={body.image} />
-                        <div >
+                        <div>
                             <h2>{body.body}</h2>
                         </div>
                         <div id={body.body + '-desc'}>
@@ -45,7 +44,6 @@ export default function ModeratorApprovePost() {
                             type='button'
                             variant='success'
                             onClick={() => {
-                                console.log(body._id);
                                 removePost({ variables: { '_id': body._id } });
                                 window.location.reload();
                             }}>

@@ -1462,6 +1462,10 @@ span p {
   padding-top: 13rem;
 }
 
+.subpage {
+  min-height: 80vh;
+}
+
 .stars {
   width: 1px;
   height: 1px;

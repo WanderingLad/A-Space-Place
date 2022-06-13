@@ -9,44 +9,47 @@ export default function ModeratorPage() {
     const [showAddPostButton, setShowAddPostButton] = useState(false);
 
     const [showApprovePostButton, setShowApprovePostButton] = useState(false);
-    
+
     const [showRemoveUserButton, setShowRemoveUserButton] = useState(false);
 
     return (
-        <>
-            <Button
-                type='button'
-                variant='success'
-                onClick={() => {
-                    setShowAddPostButton(!showAddPostButton);
-                }}>
-                Add Post
-            </Button>
-            <div>
-                {showAddPostButton ? <ModeratorAddPost /> : null}
+        <div className="d-inline-flex subpage">
+            <h3 className="align-self-center">Welcome Jackass</h3>
+            <div className="d-inline-flex">
+                <div>
+                    <Button
+                        type='button'
+                        variant='success'
+                        onClick={() => {
+                            setShowAddPostButton(!showAddPostButton);
+                        }}>
+                        Add Post
+                    </Button>
+                    {showAddPostButton ? <ModeratorAddPost /> : null}
+                </div>
+                <div>
+                    <Button
+                        type='button'
+                        variant='success'
+                        onClick={() => {
+                            setShowApprovePostButton(!showApprovePostButton);
+                        }}>
+                        Approve Post
+                    </Button>
+                    {showApprovePostButton ? <ModeratorApprovePost /> : null}
+                </div>
+                <div>
+                <Button
+                    type='button'
+                    variant='success'
+                    onClick={() => {
+                        setShowRemoveUserButton(!showRemoveUserButton);
+                    }}>
+                    Remove User
+                </Button>
+                    {showRemoveUserButton ? <ModeratorRemoveUser /> : null}
+                </div>
             </div>
-            <Button
-                type='button'
-                variant='success'
-                onClick={() => {
-                    setShowApprovePostButton(!showApprovePostButton);
-                }}>
-                Approve Post
-            </Button>
-            <div>
-                {showApprovePostButton ? <ModeratorApprovePost /> : null}
-            </div>
-            <Button
-                type='button'
-                variant='success'
-                onClick={() => {
-                    setShowRemoveUserButton(!showRemoveUserButton);
-                }}>
-                Remove User
-            </Button>
-            <div>
-                {showRemoveUserButton ? <ModeratorRemoveUser /> : null}
-            </div>
-        </>
+        </div>
     );
 }

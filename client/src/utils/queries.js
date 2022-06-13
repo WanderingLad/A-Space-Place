@@ -44,7 +44,6 @@ export const APPROVE_POST = gql`
             _id
             user
             body
-            image
             link
             content
             approved
