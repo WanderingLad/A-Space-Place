@@ -83,7 +83,7 @@ export default function Home() {
           </Button>
         </div>
         <div id={data.body.name} className="d-flex justify-center align-center row">
-          <section className="col-lg-3 col-sm-6 order-1 order-sm-0 info">
+          <section className="col-lg-2 col-sm-6 order-1 order-sm-0 info">
             <div className="info-wrapper">
               <h2>{data.body.name}</h2>
               <div>
@@ -117,7 +117,7 @@ export default function Home() {
           <section className="col-lg-5 col-sm-6 order-0 order-sm-1 image" key={data.body._id}>
             <div />
           </section>
-          <section className="col-lg-4 order-2 post" key={data.body._id}>
+          <section className="col-lg-5 order-2 post" key={data.body._id}>
             <div className="posts-wrapper">
               <h4> Submitted Posts</h4>
               <Posts />

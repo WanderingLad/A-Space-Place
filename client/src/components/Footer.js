@@ -5,7 +5,7 @@ import React from "react";
 export default function Footer() {
 
     return (
-        <footer className="full-width">
+        <footer className="min-100-vw">
             <hr />
             <h4 className="text-right">Made by me</h4>
         </footer>
