@@ -5,12 +5,17 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+:root {
+  --newgray: #1a1a1a;
+  --greentext: rgb(155, 234, 155);
+  --offwhite: rgb(255, 255, 255, .9);
+}
+
 html {
   line-height: 1.15;
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
-  overflow: hidden;
 }
 
 /* Sections
@@ -907,7 +912,7 @@ a:hover {
 }
 
 .text-dark {
-  color: #1a1a1a !important;
+  color: var(--newgray) !important;
 }
 
 .text-white {
@@ -940,7 +945,7 @@ a:hover {
 }
 
 .bg-dark {
-  background-color: #1a1a1a !important;
+  background-color: var(--newgray) !important;
 }
 
 .bg-white {
@@ -1044,7 +1049,7 @@ a:hover {
 
 .btn.btn-light {
   background-color: #d9e9e8;
-  color: #1a1a1a;
+  color: var(--newgray);
 }
 
 .btn.btn-light:hover {
@@ -1351,10 +1356,6 @@ label form [type='radio'] {
   background-size: cover;
 }
 
-.full-width {
-  min-width: 100%;
-}
-
 #blac-text {
   color: black;
 }
@@ -1366,7 +1367,7 @@ label form [type='radio'] {
 
 hr {
   border-width: 2px;
-  background-color: #1a1a1a;
+  background-color: var(--newgray);
   width: 95%;
 }
 
@@ -1378,18 +1379,6 @@ figure img {
   border-radius: 100%;
 }
 
-.title-text {
-  color: rgb(155, 234, 155) !important;
-}
-
-#info-title {
-  background: linear-gradient(to right, black 20%, #1a1a1a);
-  width: auto;
-  display: inline-block;
-  padding: .5rem .5rem .5rem 2.5rem;
-  margin-bottom: 1rem;
-}
-
 .col-2 {
   padding: 0;
 }
@@ -1399,21 +1388,12 @@ ul {
   padding: 1rem;
 }
 
-.posts {
-  height: 554px;
-  padding-right: 5rem;
-}
-
 #posts-ul {
-  background: #1a1a1a;
-}
-
-#words {
-  padding-left: 1rem;
+  background: var(--newgray);
 }
 
 .modal-content {
-  background: #1a1a1a;
+  background: var(--newgray);
 }
 
 pre {
@@ -1423,13 +1403,15 @@ pre {
   white-space: pre-wrap;
 }
 
-#post-title {
-  margin: 1rem 0 2.5rem 0;
-  font-weight: 600;
-}
+#post-title {}
 
 li {
   margin: 0 0 1rem .5rem;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
 }
 
 footer h4 {
@@ -1438,7 +1420,7 @@ footer h4 {
 
 span p {
   font-weight: 300;
-  color: rgb(255, 255, 255, .9);
+  color: var(--offwhite);
 }
 
 #repeating-title {
@@ -1447,12 +1429,12 @@ span p {
 
 #modal-title {
   padding: 0.5rem 0 2rem 0;
-  color: rgb(155, 234, 155);
+  color: var(--greentext);
 }
 
 #modal-text {
   padding: 1rem 0 1rem 0;
-  color: rgb(255, 255, 255, .9);
+  color: var(--offwhite);
 }
 
 #modal-container {
@@ -1463,14 +1445,133 @@ span p {
   padding-top: 13rem;
 }
 
-.subpage {
-  min-height: 81vh;
-}
-
 .overflow-posts {
   height: 600px;
-  background-color: #1a1a1a;
-  color: rgb(255, 255, 255, .9);
+  background-color: var(--newgray);
+  color: var(--offwhite);
+}
+
+.posts-wrapper {
+  height: 512px;
+}
+
+.info h2 {
+  background: linear-gradient(to right, black 20%, var(--newgray));
+  width: auto;
+  display: inline-block;
+  padding: .5rem .5rem .5rem 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.info h4 {
+  color: var(--greentext) !important;
+}
+
+.post h4 {
+  margin: 1rem 0 2.5rem 0;
+  font-weight: 600;
+}
+
+#Sun .image div {
+  background-image: url('./images/Sun.jpg');
+  width: 100%;
+  max-height: 512px;
+  border-radius: 100%;
+  height: 512px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
+#Mercury .image div {
+  background-image: url('./images/Mercury.jpg');
+  width: 100%;
+  max-height: 512px;
+  border-radius: 100%;
+  height: 512px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#Venus .image div {
+  background-image: url('./images/Venus.jpg');
+  width: 100%;
+  max-height: 512px;
+  border-radius: 100%;
+  height: 512px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#Earth .image div {
+  background-image: url('./images/Earth.jpg');
+  width: 100%;
+  max-height: 512px;
+  border-radius: 100%;
+  height: 512px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#Mars .image div {
+  background-image: url('./images/Mars.jpg');
+  width: 100%;
+  max-height: 512px;
+  border-radius: 100%;
+  height: 512px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#Jupiter .image div {
+  background-image: url('./images/Jupiter.jpg');
+  width: 100%;
+  max-height: 512px;
+  border-radius: 100%;
+  height: 512px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#Saturn .image div {
+  background-image: url('./images/Saturn.jpg');
+  width: 100%;
+  max-height: 512px;
+  border-radius: 100%;
+  height: 512px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#Uranus .image div {
+  background-image: url('./images/Uranus.jpg');
+  width: 100%;
+  max-height: 512px;
+  border-radius: 100%;
+  height: 512px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#Neptune .image div {
+  background-image: url('./images/Neptune.jpg');
+  width: 100%;
+  max-height: 512px;
+  border-radius: 100%;
+  height: 512px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#Pluto .image div {
+  background-image: url('./images/Pluto.jpg');
+  width: 100%;
+  max-height: 512px;
+  border-radius: 100%;
+  height: 512px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .stars {
@@ -1537,7 +1638,7 @@ span p {
   }
 }
 
-/* col-sm */
+/* col-sm
 @media screen and (min-width: 640px) {
   .col-sm-auto {
     flex-grow: 1;
@@ -1656,8 +1757,8 @@ span p {
     align-content: center;
   }
 }
-
-/* col-md */
+ */
+/* col-md
 @media screen and (min-width: 768px) {
   .col-md-auto {
     flex-grow: 1;
@@ -1775,9 +1876,9 @@ span p {
   .align-content-center-md {
     align-content: center;
   }
-}
+} */
 
-/* col-lg */
+/*  col-lg 
 @media screen and (min-width: 992px) {
   .col-md-auto {
     flex-grow: 1;
@@ -1896,12 +1997,8 @@ span p {
     align-content: center;
   }
 }
-
-@media screen and (min-width: 1024px) {
-
-}
-
-/* col-xl */
+ */
+/* col-xl 
 @media screen and (min-width: 1200px) {
   .col-xl-1 {
     flex: 0 0 8.33333%;
@@ -2019,8 +2116,4 @@ span p {
     margin-top: -.75rem;
   }
 
-  .posts{
-    margin-left: 2.5rem;
-  }
-
-}
+} */

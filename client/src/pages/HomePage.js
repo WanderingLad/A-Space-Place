@@ -66,12 +66,12 @@ export default function Home() {
   }
 
   return (
-    <div className="full-width">
+    <div className="min-100-vw container">
       <div className="stars" />
-      <div className="stars2"/>
-      <div className="stars3"/>
+      <div className="stars2" />
+      <div className="stars3" />
       <main>
-        <div className="flex-column justify-center align-center">
+        <div className="d-flex justify-center align-center row">
           <Button
             type='button'
             onClick={() => {
@@ -82,47 +82,49 @@ export default function Home() {
             <FontAwesomeIcon icon={faAngleUp} />
           </Button>
         </div>
-        <div className="d-inline-flex full-width">
-          <section className="col-3">
-            <h2 id="info-title">{data.body.name}</h2>
-            <div id="words">
-              <span>
-                <h4 className="title-text">{(data.body.name === "Sun" ? "Star" : "Planet")} Type</h4>
-                <p>{data.body.type}</p>
-              </span>
-              <span>
-                <h4 className="title-text">Age</h4>
-                <p>{data.body.age}</p>
-              </span>
-              <span>
-                <h4 className="title-text">Distance from {(data.body.name === "Sun" ? "Galatic Center" : "Sun")}</h4>
-                <p>{data.body.dist}</p>
-              </span>
-              <span>
-                <h4 className="title-text">Length of Year</h4>
-                <p>{data.body.year}</p>
-              </span>
-              <span>
-                <h4 className="title-text">Namesake</h4>
-                <p>{data.body.sake}</p>
-              </span>
-              <span>
-                <h4 className="title-text">Average Temperature</h4>
-                <p>{data.body.temp}</p>
-              </span>
+        <div id={data.body.name} className="d-flex justify-center align-center row">
+          <section className="col-lg-3 col-sm-6 order-1 order-sm-0 info">
+            <div className="info-wrapper">
+              <h2>{data.body.name}</h2>
+              <div>
+                <span>
+                  <h4>{(data.body.name === "Sun" ? "Star" : "Planet")} Type</h4>
+                  <p>{data.body.type}</p>
+                </span>
+                <span>
+                  <h4>Age</h4>
+                  <p>{data.body.age}</p>
+                </span>
+                <span>
+                  <h4>Distance from {(data.body.name === "Sun" ? "Galatic Center" : "Sun")}</h4>
+                  <p>{data.body.dist}</p>
+                </span>
+                <span>
+                  <h4>Length of Year</h4>
+                  <p>{data.body.year}</p>
+                </span>
+                <span>
+                  <h4>Namesake</h4>
+                  <p>{data.body.sake}</p>
+                </span>
+                <span>
+                  <h4>Average Temperature</h4>
+                  <p>{data.body.temp}</p>
+                </span>
+              </div>
             </div>
           </section>
-          <section className="col-5 align-self-center" id={data.body.name} key={data.body._id}>
-            <figure>
-              <img alt={data.body.name} src={require("../images/" + data.body.image).default} />
-            </figure>
+          <section className="col-lg-5 col-sm-6 order-0 order-sm-1 image" key={data.body._id}>
+            <div />
           </section>
-          <section className="col-4 posts" id={data.body.name} key={data.body._id}>
-            <h4 id="post-title"> Submitted Posts</h4>
-            <Posts />
+          <section className="col-lg-4 order-2 post" key={data.body._id}>
+            <div className="posts-wrapper">
+              <h4> Submitted Posts</h4>
+              <Posts />
+            </div>
           </section>
         </div>
-        <div className="flex-column justify-center align-center">
+        <div className="d-flex justify-center align-center row">
           <Button
             type='button'
             onClick={() => {
@@ -130,12 +132,10 @@ export default function Home() {
                 setCount(count + 1);
               }
             }}>
-            
             <FontAwesomeIcon icon={faAngleDown} />
           </Button>
         </div>
       </main>
-
     </div >
   );
 };

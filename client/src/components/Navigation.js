@@ -13,7 +13,7 @@ const AppNavbar = () => {
 
   return (
     <div className="col-6">
-      <Navbar bg='none' variant='dark' expand='lg'>
+      <Navbar bg='none' expand='lg'>
         <Container fluid>
           <Navbar.Collapse id='navbar'>
             <Nav className='ml-auto'>
