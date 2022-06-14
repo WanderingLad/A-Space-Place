@@ -38,7 +38,7 @@ export default function ModeratorApprovePost() {
                             type='button'
                             onClick={() => {
                                 approvePosts({ variables: { '_id': body._id } })
-                                window.location.reload();
+                                window.location.assign('/');
                             }}>
                             Approve Post
                         </Button>
@@ -46,7 +46,7 @@ export default function ModeratorApprovePost() {
                             type='button'
                             onClick={() => {
                                 removePost({ variables: { '_id': body._id } });
-                                window.location.reload();
+                                window.location.assign('/');
                             }}>
                             Remove Post
                         </Button>

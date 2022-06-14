@@ -26,7 +26,7 @@ export default function ModeratorRemoveUser() {
                             type='button'
                             onClick={() => {
                                 removeUser({ variables: { '_id': body._id } });
-                                window.location.reload();
+                                window.location.assign('/');
                             }}>
                             Remove User
                         </Button>
