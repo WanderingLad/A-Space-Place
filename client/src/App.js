@@ -34,27 +34,29 @@ function App() {
     <ApolloProvider client={client}>
       <ModuleProvider>
         <Router>
-          <div id="main-div" className="min-100-vh bg-black">
-            <Header />
-            <Routes>
-              <Route
-                path="/"
-                element={<Home />}
-              />
-              <Route
-                path='/mod'
-                element={<ModeratorPage />}
-              />
-              <Route
-                path='/user'
-                element={<UserPage />}
-              />
-              <Route
-                path='*'
-                element={<h1 className='display-2'>Wrong page!</h1>}
-              />
-            </Routes>
-            <Footer />
+          <div id="main-div" className="min-100-vh bg-black d-flex">
+            <div className="align-self-center min-100-vw">
+              <Header />
+              <Routes>
+                <Route
+                  path="/"
+                  element={<Home />}
+                />
+                <Route
+                  path='/mod'
+                  element={<ModeratorPage />}
+                />
+                <Route
+                  path='/user'
+                  element={<UserPage />}
+                />
+                <Route
+                  path='*'
+                  element={<h1 className='display-2'>Wrong page!</h1>}
+                />
+              </Routes>
+              <Footer />
+            </div>
           </div>
         </Router>
       </ModuleProvider>

@@ -1440,9 +1440,9 @@ span p {
   font-weight: 600;
 }
 
-#Sun .image div {
+#Sun .image {
   background-image: url('./images/Sun.jpg');
-  max-width: 100%;
+  width: 100%;
   max-height: 512px;
   border-radius: 100%;
   height: 512px;
@@ -1450,9 +1450,9 @@ span p {
   background-position: center;
 }
 
-#Mercury .image div {
+#Mercury .image {
   background-image: url('./images/Mercury.jpg');
-  max-width: 100%;
+  width: 100%;
   max-height: 512px;
   border-radius: 100%;
   height: 512px;
@@ -1460,9 +1460,9 @@ span p {
   background-position: center;
 }
 
-#Venus .image div {
+#Venus .image {
   background-image: url('./images/Venus.jpg');
-  max-width: 100%;
+  width: 100%;
   max-height: 512px;
   border-radius: 100%;
   height: 512px;
@@ -1470,9 +1470,9 @@ span p {
   background-position: center;
 }
 
-#Earth .image div {
+#Earth .image {
   background-image: url('./images/Earth.jpg');
-  max-width: 100%;
+  width: 100%;
   max-height: 512px;
   border-radius: 100%;
   height: 512px;
@@ -1480,9 +1480,9 @@ span p {
   background-position: center;
 }
 
-#Mars .image div {
+#Mars .image {
   background-image: url('./images/Mars.jpg');
-  max-width: 100%;
+  width: 100%;
   max-height: 512px;
   border-radius: 100%;
   height: 512px;
@@ -1490,9 +1490,9 @@ span p {
   background-position: center;
 }
 
-#Jupiter .image div {
+#Jupiter .image {
   background-image: url('./images/Jupiter.jpg');
-  max-width: 100%;
+  width: 100%;
   max-height: 512px;
   border-radius: 100%;
   height: 512px;
@@ -1500,9 +1500,9 @@ span p {
   background-position: center;
 }
 
-#Saturn .image div {
+#Saturn .image {
   background-image: url('./images/Saturn.jpg');
-  max-width: 100%;
+  width: 100%;
   max-height: 512px;
   border-radius: 100%;
   height: 512px;
@@ -1510,9 +1510,9 @@ span p {
   background-position: center;
 }
 
-#Uranus .image div {
+#Uranus .image {
   background-image: url('./images/Uranus.jpg');
-  max-width: 100%;
+  width: 100%;
   max-height: 512px;
   border-radius: 100%;
   height: 512px;
@@ -1520,9 +1520,9 @@ span p {
   background-position: center;
 }
 
-#Neptune .image div {
+#Neptune .image {
   background-image: url('./images/Neptune.jpg');
-  max-width: 100%;
+  width: 100%;
   max-height: 512px;
   border-radius: 100%;
   height: 512px;
@@ -1530,9 +1530,9 @@ span p {
   background-position: center;
 }
 
-#Pluto .image div {
+#Pluto .image {
   background-image: url('./images/Pluto.jpg');
-  max-width: 100%;
+  width: 100%;
   max-height: 512px;
   border-radius: 100%;
   height: 512px;

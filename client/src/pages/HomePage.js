@@ -6,7 +6,7 @@ import Posts from '../components/homepage/Posts';
 import { GET_SUN, GET_MERCURY, GET_VENUS, GET_EARTH, GET_MARS, GET_JUPITER, GET_SATURN, GET_NEPTUNE, GET_URANUS, GET_PLUTO } from '../utils/Module/actions';
 import { useDispatch } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleUp, faAngleDown } from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 
 export default function Home() {
 
@@ -71,19 +71,8 @@ export default function Home() {
       <div className="stars2" />
       <div className="stars3" />
       <main>
-        <div className="d-flex justify-center align-center row">
-          <Button
-            type='button'
-            onClick={() => {
-              if (count > 0) {
-                setCount(count - 1);
-              }
-            }}>
-            <FontAwesomeIcon icon={faAngleUp} />
-          </Button>
-        </div>
         <div id={data.body.name} className="d-flex justify-center align-center row">
-          <section className="col-lg-2 col-sm-6 order-1 order-sm-0 info">
+          <section className="col-lg-3 col-sm-6 order-1 order-sm-0 info">
             <div className="info-wrapper">
               <h2>{data.body.name}</h2>
               <div>
@@ -114,10 +103,38 @@ export default function Home() {
               </div>
             </div>
           </section>
-          <section className="col-lg-5 col-sm-6 order-0 order-sm-1 image" key={data.body._id}>
-            <div />
+          <section className="col-lg-5 col-sm-6 order-0 order-sm-1 d-flex" key={data.body._id}>
+            <div className="align-self-center">
+              <Button
+                type='button'
+                onClick={() => {
+                  if (count > 0) {
+                    setCount(count - 1);
+                  }
+                  if(count === 0) {
+                    setCount(9);
+                  }
+                }}>
+                <FontAwesomeIcon icon={faAngleLeft} />
+              </Button>
+            </div>
+            <div className="image"/>
+            <div className="align-self-center">
+              <Button
+                type='button'
+                onClick={() => {
+                  if (count < 9) {
+                    setCount(count + 1);
+                  }
+                  if(count === 9){
+                    setCount(0);
+                  }
+                }}>
+                <FontAwesomeIcon icon={faAngleRight} />
+              </Button>
+            </div>
           </section>
-          <section className="col-lg-5 order-2 post" key={data.body._id}>
+          <section className="col-lg-4 order-2 post" key={data.body._id}>
             <div className="posts-wrapper">
               <h4> Submitted Posts</h4>
               <Posts />
@@ -125,15 +142,7 @@ export default function Home() {
           </section>
         </div>
         <div className="d-flex justify-center align-center row">
-          <Button
-            type='button'
-            onClick={() => {
-              if (count < 9) {
-                setCount(count + 1);
-              }
-            }}>
-            <FontAwesomeIcon icon={faAngleDown} />
-          </Button>
+
         </div>
       </main>
     </div >
