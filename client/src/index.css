@@ -1363,6 +1363,8 @@ hr {
 
 .modal-content {
   background: var(--newgray);
+  max-height: 600px;
+  overflow-y: auto;
 }
 
 pre {
@@ -1438,6 +1440,10 @@ span p {
 .post h4 {
   margin: 1rem 0 2.5rem 0;
   font-weight: 600;
+}
+
+.approve-posts Button{
+  margin-right:1rem;
 }
 
 #Sun .image {

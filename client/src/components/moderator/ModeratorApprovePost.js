@@ -16,10 +16,10 @@ export default function ModeratorApprovePost() {
     if (error) return `Error! ${error.message}`;
 
     return (
-        <ul className="overflow-auto overflow-posts">
+        <div className="approve-posts">
             {data.approvePost.map((body) => {
                 return (
-                    <li id={body.body} key={body._id}>
+                    <div id={body.body} key={body._id}>
                         <div>
                             <h2>{body.body}</h2>
                         </div>
@@ -50,9 +50,9 @@ export default function ModeratorApprovePost() {
                             }}>
                             Remove Post
                         </Button>
-                    </li>
+                    </div>
                 )
             })}
-        </ul>
+        </div>
     );
 };

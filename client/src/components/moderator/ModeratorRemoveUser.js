@@ -21,15 +21,16 @@ export default function ModeratorRemoveUser() {
                         <div >
                             <h4>{body.username}</h4>
                             <h4>{body.email}</h4>
+
+                            <Button
+                                type='button'
+                                onClick={() => {
+                                    removeUser({ variables: { '_id': body._id } });
+                                    window.location.assign('/');
+                                }}>
+                                Remove User
+                            </Button>
                         </div>
-                        <Button
-                            type='button'
-                            onClick={() => {
-                                removeUser({ variables: { '_id': body._id } });
-                                window.location.assign('/');
-                            }}>
-                            Remove User
-                        </Button>
                     </section>
                 )
             })}

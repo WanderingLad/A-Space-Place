@@ -3,6 +3,7 @@ import { useQuery } from '@apollo/client';
 import { BODY } from '../utils/queries';
 import { Button } from 'react-bootstrap';
 import Posts from '../components/homepage/Posts';
+import Buttons from '../components/homepage/Buttons';
 import { GET_SUN, GET_MERCURY, GET_VENUS, GET_EARTH, GET_MARS, GET_JUPITER, GET_SATURN, GET_NEPTUNE, GET_URANUS, GET_PLUTO } from '../utils/Module/actions';
 import { useDispatch } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -72,7 +73,7 @@ export default function Home() {
       <div className="stars3" />
       <main>
         <div id={data.body.name} className="d-flex justify-center align-center row">
-          <section className="col-lg-3 col-sm-6 order-1 order-sm-0 info">
+          <section className="col-lg-2 col-sm-6 order-1 order-sm-0 info">
             <div className="info-wrapper">
               <h2>{data.body.name}</h2>
               <div>
@@ -111,14 +112,14 @@ export default function Home() {
                   if (count > 0) {
                     setCount(count - 1);
                   }
-                  if(count === 0) {
+                  if (count === 0) {
                     setCount(9);
                   }
                 }}>
                 <FontAwesomeIcon icon={faAngleLeft} />
               </Button>
             </div>
-            <div className="image"/>
+            <div className="image" />
             <div className="align-self-center">
               <Button
                 type='button'
@@ -126,7 +127,7 @@ export default function Home() {
                   if (count < 9) {
                     setCount(count + 1);
                   }
-                  if(count === 9){
+                  if (count === 9) {
                     setCount(0);
                   }
                 }}>
@@ -134,15 +135,13 @@ export default function Home() {
               </Button>
             </div>
           </section>
-          <section className="col-lg-4 order-2 post" key={data.body._id}>
+          <section className="col-lg-5 order-2 post" key={data.body._id}>
             <div className="posts-wrapper">
               <h4> Submitted Posts</h4>
               <Posts />
+              <Buttons />
             </div>
           </section>
-        </div>
-        <div className="d-flex justify-center align-center row">
-
         </div>
       </main>
     </div >

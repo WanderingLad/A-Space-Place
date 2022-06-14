@@ -4,7 +4,7 @@ import { useQuery } from '@apollo/client';
 import { POSTS } from '../../utils/queries';
 import { useSelector } from 'react-redux';
 import { Modal, Tab } from 'react-bootstrap';
-import Modals from './Modals'
+import Modals from './Modals';
 
 export default function Posts() {
 

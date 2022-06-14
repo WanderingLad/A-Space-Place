@@ -8,8 +8,6 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import Home from './pages/HomePage';
-import ModeratorPage from './pages/ModeratorPage';
-import UserPage from './pages/UserPage';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ModuleProvider from './utils/Module/ModuleContext';
@@ -41,14 +39,6 @@ function App() {
                 <Route
                   path="/"
                   element={<Home />}
-                />
-                <Route
-                  path='/mod'
-                  element={<ModeratorPage />}
-                />
-                <Route
-                  path='/user'
-                  element={<UserPage />}
                 />
                 <Route
                   path='*'

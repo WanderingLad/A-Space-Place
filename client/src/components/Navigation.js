@@ -18,22 +18,13 @@ const AppNavbar = () => {
           <Navbar.Collapse id='navbar'>
             <Nav className='ml-auto'>
               {Auth.loggedIn() ? (
-                localStorage.getItem("user") === "Moderator" ?
-                  <div className="d-inline-flex">
-                    <Nav.Link as={Link} to='/'>Home</Nav.Link>
-                    <Nav.Link as={Link} to='/mod'>{localStorage.getItem('username')}</Nav.Link>
-                    <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
-                  </div> :
-                  <div className="d-inline-flex">
-                    <Nav.Link as={Link} to='/'>Home</Nav.Link>
-                    <Nav.Link as={Link} to='/user'>{localStorage.getItem('username')}</Nav.Link>
-                    <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
-                  </div>) : (
-                <div className="d-inline-flex">
-                  <Nav.Link as={Link} to='/'>Home</Nav.Link>
-                  <Nav.Link onClick={() => setShowModal(true)}>Login/Sign Up</Nav.Link>
-                </div>
-              )}
+                <div className="d-flex">
+                  <p className="align-self-center px-3">Welcome, {localStorage.getItem('username')}</p>
+                  <Nav.Link onClick={() => { Auth.logout(); localStorage.setItem('user', ""); }}><p>Logout</p></Nav.Link>
+                </div>)
+                :
+                <Nav.Link onClick={() => setShowModal(true)}>Login/Sign Up</Nav.Link>
+              }
             </Nav>
           </Navbar.Collapse>
         </Container>
