@@ -9,12 +9,10 @@ export default function Modals() {
     if (loading) return 'Loading...';
     if (error) return `Error! ${error.message}`;
 
-    console.log(data);
-
     return (
-        <div>
-            <h4 id="modal-title">{data.post.title}</h4>
-            <div id="modal-text">
+        <div className="modals">
+            <h4>{data.post.title}</h4>
+            <div>
                 <p><pre>{data.post.content}</pre></p>
                 <p>Read the Full Article Below</p>
             </div>

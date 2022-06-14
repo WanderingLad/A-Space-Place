@@ -18,12 +18,12 @@ export default function Posts() {
     if (error) return `Error! ${error.message}`;
 
     return (
-        <ul id="posts-ul" className='overflow-auto h-75 align-self-center full-width'>
+        <ul className='overflow-auto h-75'>
             {data.posts.map((body) => {
                 if (body.approved) {
                     return (
                         <li key={body.id}>
-                            <Link to="/" onClick={() => { localStorage.setItem('_id', body._id); setShowModal(true) }}><h3 id="repeating-title">{body.title}</h3></Link>
+                            <Link to="/" onClick={() => { localStorage.setItem('_id', body._id); setShowModal(true) }}><h3>{body.title}</h3></Link>
                         </li>
                     )
                 }
@@ -37,7 +37,7 @@ export default function Posts() {
                 show={showModal}
                 onHide={() => setShowModal(false)}
                 aria-labelledby='post-modal'
-                id="modal-container"
+                className="m-container"
             >
                 <Tab.Container defaultActiveKey='post'>
                     <Modal.Body>

@@ -34,7 +34,7 @@ function App() {
     <ApolloProvider client={client}>
       <ModuleProvider>
         <Router>
-          <div id="main-div" className="min-100-vh">
+          <div id="main-div" className="min-100-vh bg-black">
             <Header />
             <Routes>
               <Route
