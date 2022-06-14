@@ -33,7 +33,7 @@ export default function ModeratorAddPost() {
             );
             console.log(data);
             setShowSuccess(true);
-            window.location.reload();
+            window.location.assign('/');
         } catch (err) {
             console.error(err);
             setShowAlert(true);

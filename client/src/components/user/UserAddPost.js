@@ -33,7 +33,7 @@ export default function UserAddPost() {
             );
             console.log(data);
             setShowSuccess(true);
-            window.location.reload();
+            window.location.assign('/');
         } catch (err) {
             console.error(err);
             setShowAlert(true);
