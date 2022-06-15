@@ -1430,7 +1430,7 @@ span p {
   background: linear-gradient(to right, black 20%, var(--newgray));
   width: auto;
   display: inline-block;
-  padding: .5rem .5rem .5rem 2.5rem;
+  padding: .5rem 1rem .5rem 2.5rem;
   margin-bottom: 1rem;
   font-size: 2.5rem;
 }
