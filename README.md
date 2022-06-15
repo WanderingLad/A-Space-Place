@@ -5,6 +5,7 @@ An Open Source Educational website about our solar system. It features user acco
   
 ## Installation
 Download
+
 Run npm i 
 Run npm run seed
 Run npm run develop
