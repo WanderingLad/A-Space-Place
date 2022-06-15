@@ -14,22 +14,22 @@ export default function Buttons() {
 
     return (
         <div>
-            <div className="d-flex text-center">
-                <div className="col-4">
+            <div className="d-flex">
+                <div className="col-4 text-left">
                     <Button
                         type='button'
                         onClick={(e) => {e.preventDefault(); setShowModAdd(true); }}>
                         Add Post
                     </Button>
                 </div>
-                <div className="col-4">
+                <div className="col-4 text-center">
                     <Button
                         type='button'
                         onClick={(e) => {e.preventDefault(); setShowModApprove(true); }} >
                         Approve Post
                     </Button>
                 </div>
-                <div className="col-4">
+                <div className="col-4 text-right">
                     <Button
                         type='button'
                         onClick={(e) => {e.preventDefault(); setShowModRemove(true); }}>

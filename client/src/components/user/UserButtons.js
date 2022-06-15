@@ -11,15 +11,15 @@ export default function UserButtons() {
 
     return (
         <div>
-            <div className="d-flex text-center">
-                <div className="col-6">
+            <div className="d-flex">
+                <div className="col-6  text-left">
                     <Button
                         type='button'
                         onClick={(e) => {e.preventDefault(); setShowUserAdd(true); }}>
                         Add Post
                     </Button>
                 </div>
-                <div className="col-6">
+                <div className="col-6 text-right">
                     <Button
                         type='button'
                         onClick={ (e) => {e.preventDefault(); setShowUserView(true); }}>
