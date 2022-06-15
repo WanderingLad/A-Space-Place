@@ -78,34 +78,34 @@ export default function Home() {
               <h2>{data.body.name}</h2>
               <div>
                 <span>
-                  <h4>{(data.body.name === "Sun" ? "Star" : "Planet")} Type</h4>
-                  <p>{data.body.type}</p>
+                  <h5>{(data.body.name === "Sun" ? "Star" : "Planet")} Type</h5>
+                  <h4>{data.body.type}</h4>
                 </span>
                 <span>
-                  <h4>Age</h4>
-                  <p>{data.body.age}</p>
+                  <h5>Age</h5>
+                  <h4>{data.body.age}</h4>
                 </span>
                 <span>
-                  <h4>Distance from {(data.body.name === "Sun" ? "Galatic Center" : "Sun")}</h4>
-                  <p>{data.body.dist}</p>
+                  <h5>Distance from {(data.body.name === "Sun" ? "Galatic Center" : "Sun")}</h5>
+                  <h4>{data.body.dist}</h4>
                 </span>
                 <span>
-                  <h4>Length of Year</h4>
-                  <p>{data.body.year}</p>
+                  <h5>Length of Year</h5>
+                  <h4>{data.body.year}</h4>
                 </span>
                 <span>
-                  <h4>Namesake</h4>
-                  <p>{data.body.sake}</p>
+                  <h5>Namesake</h5>
+                  <h4>{data.body.sake}</h4>
                 </span>
                 <span>
-                  <h4>Average Temperature</h4>
-                  <p>{data.body.temp}</p>
+                  <h5>Average Temperature</h5>
+                  <h4>{data.body.temp}</h4>
                 </span>
               </div>
             </div>
           </section>
           <section className="col-lg-5 col-sm-6 order-0 order-sm-1 d-flex" key={data.body._id}>
-            <div className="align-self-center">
+            <div className="align-self-center left-button">
               <Button
                 type='button'
                 onClick={() => {
@@ -120,7 +120,7 @@ export default function Home() {
               </Button>
             </div>
             <div className="image" />
-            <div className="align-self-center">
+            <div className="align-self-center right-button">
               <Button
                 type='button'
                 onClick={() => {
@@ -137,7 +137,7 @@ export default function Home() {
           </section>
           <section className="col-lg-5 order-2 post" key={data.body._id}>
             <div className="posts-wrapper">
-              <h4> Submitted Posts</h4>
+              <h4>Submitted Posts</h4>
               <Posts />
               <Buttons />
             </div>

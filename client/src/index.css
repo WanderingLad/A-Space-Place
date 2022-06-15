@@ -9,6 +9,7 @@
   --newgray: #1a1a1a;
   --greentext: rgb(155, 234, 155);
   --offwhite: rgb(255, 255, 255, .9);
+  font-family: 'Lato', sans-serif;
 }
 
 html {
@@ -63,7 +64,6 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace;
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -106,7 +106,6 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -1390,6 +1389,8 @@ footer {
 
 footer h4 {
   padding-right: 2rem;
+  font-weight: 300;
+  color: var(--offwhite);
 }
 
 span p {
@@ -1416,13 +1417,13 @@ span p {
 }
 
 .posts-wrapper ul {
-  background: var(--newgray);
+  background: linear-gradient(to left, black 20%, var(--newgray));
   list-style: none;
   padding: 1rem;
 }
 
-.posts-wrapper ul h3 {
-  font-weight: 300;
+.posts-wrapper li {
+  margin: .5rem 0 1rem 0;
 }
 
 .info h2 {
@@ -1431,19 +1432,28 @@ span p {
   display: inline-block;
   padding: .5rem .5rem .5rem 2.5rem;
   margin-bottom: 1rem;
+  font-size: 2.5rem;
 }
 
-.info h4 {
+.info h5 {
   color: var(--greentext) !important;
 }
 
 .post h4 {
   margin: 1rem 0 2.5rem 0;
-  font-weight: 600;
+  font-weight: 300;
 }
 
-.approve-posts Button{
-  margin-right:1rem;
+.approve-posts Button {
+  margin-right: 1rem;
+}
+
+.left-button {
+  margin-left:  2rem;
+}
+
+.right-button {
+  margin-right:  2rem;
 }
 
 #Sun .image {

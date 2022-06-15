@@ -19,11 +19,11 @@ const AppNavbar = () => {
             <Nav className='ml-auto'>
               {Auth.loggedIn() ? (
                 <div className="d-flex">
-                  <p className="align-self-center px-3">Welcome, {localStorage.getItem('username')}</p>
-                  <Nav.Link onClick={() => { Auth.logout(); localStorage.setItem('user', ""); }}><p>Logout</p></Nav.Link>
+                  <h5 className="align-self-center px-3">Welcome, {localStorage.getItem('username')}</h5>
+                  <Nav.Link onClick={() => { Auth.logout(); localStorage.setItem('user', ""); }}><h5>Logout</h5></Nav.Link>
                 </div>)
                 :
-                <Nav.Link onClick={() => setShowModal(true)}>Login/Sign Up</Nav.Link>
+                <Nav.Link onClick={() => setShowModal(true)}><h5>Login/Signup</h5></Nav.Link>
               }
             </Nav>
           </Navbar.Collapse>
