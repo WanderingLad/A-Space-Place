@@ -7,7 +7,7 @@ import Buttons from '../components/homepage/Buttons';
 import { GET_SUN, GET_MERCURY, GET_VENUS, GET_EARTH, GET_MARS, GET_JUPITER, GET_SATURN, GET_NEPTUNE, GET_URANUS, GET_PLUTO } from '../utils/Module/actions';
 import { useDispatch } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
+import { faAngleUp, faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
 export default function Home() {
 
@@ -104,8 +104,8 @@ export default function Home() {
               </div>
             </div>
           </section>
-          <section className="col-lg-5 col-sm-6 order-0 order-sm-1 d-flex" key={data.body._id}>
-            <div className="align-self-center left-button">
+          <section className="col-lg-5 col-sm-6 order-0 order-sm-1 " key={data.body._id}>
+            <div className="text-center">
               <Button
                 type='button'
                 onClick={() => {
@@ -116,11 +116,11 @@ export default function Home() {
                     setCount(9);
                   }
                 }}>
-                <FontAwesomeIcon icon={faAngleLeft} />
+                <FontAwesomeIcon icon={faAngleUp} />
               </Button>
             </div>
             <div className="image" />
-            <div className="align-self-center right-button">
+            <div className="text-center">
               <Button
                 type='button'
                 onClick={() => {
@@ -131,7 +131,7 @@ export default function Home() {
                     setCount(0);
                   }
                 }}>
-                <FontAwesomeIcon icon={faAngleRight} />
+                <FontAwesomeIcon icon={faAngleDown} />
               </Button>
             </div>
           </section>

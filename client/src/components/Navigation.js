@@ -15,7 +15,6 @@ const AppNavbar = () => {
     <div className="col-6">
       <Navbar bg='none' expand='lg'>
         <Container fluid>
-          <Navbar.Collapse id='navbar'>
             <Nav className='ml-auto'>
               {Auth.loggedIn() ? (
                 <div className="d-flex">
@@ -26,7 +25,6 @@ const AppNavbar = () => {
                 <Nav.Link onClick={() => setShowModal(true)}><h5>Login/Signup</h5></Nav.Link>
               }
             </Nav>
-          </Navbar.Collapse>
         </Container>
       </Navbar>
 
