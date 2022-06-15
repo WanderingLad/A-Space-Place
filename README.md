@@ -4,10 +4,13 @@
 An Open Source Educational website about our solar system. It features user account creation, active moderation, and user interaction features to actively monitor, edit and add content to the website.
   
 ## Installation
-No installation required
+Download
+Run npm i 
+Run npm run seed
+Run npm run develop
 
 ## Usage
-Follow the link [https://wanderinglad.github.io/Jimmy-Reilly-Portfolio/](https://fierce-chamber-88860.herokuapp.com/)
+Follow the [link](https://fierce-chamber-88860.herokuapp.com/)
   
 ## Credits
 James Reilly - https://github.com/WanderingLad/
