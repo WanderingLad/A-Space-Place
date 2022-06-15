@@ -104,7 +104,7 @@ export default function Home() {
               </div>
             </div>
           </section>
-          <section className="col-lg-5 col-sm-6 order-0 order-sm-1 " key={data.body._id}>
+          <section className="col-lg-5 col-sm-6 order-0 order-sm-1" key={data.body._id}>
             <div className="text-center">
               <Button
                 type='button'
