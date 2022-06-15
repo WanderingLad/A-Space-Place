@@ -1,6 +1,7 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import { POST } from '../../utils/queries';
+import { Button } from 'react-bootstrap';
 
 export default function Modals() {
 
@@ -14,9 +15,13 @@ export default function Modals() {
             <h4>{data.post.title}</h4>
             <div>
                 <p><pre>{data.post.content}</pre></p>
-                <p>Read the Full Article Below</p>
+                <Button
+                    type='button'
+                    href={data.post.link}
+                    target="_blank">
+                    Read the Full Article
+                </Button>
             </div>
-            <a href={data.post.link} target="_blank" rel="noopener noreferrer">{data.post.link}</a>
         </div>
     )
 }
